@@ -59,15 +59,15 @@ export const createConnection = () => (dispatch:AppDispatch)  => {
   )
 }
 
-export const setClientName = (name:string) => (dispatch:AppDispatch) => {
+export const setClientName = (name:string) => () => {
   api.sendName(name)
 }
-export const typeMessage = () => (dispatch:AppDispatch) => {
+export const typeMessage = () => () => {
   api.typeMessage()
 }
-export const sendMessage = (message:string) => (dispatch:AppDispatch) => {
+export const sendMessage = (message:string) => () => {
   api.clientMessageSent(message)
 }
-export const destroyConnection = () => (dispatch:AppDispatch)  => {
+export const destroyConnection = () => ()  => {
   api.destroyConnection()
 }
